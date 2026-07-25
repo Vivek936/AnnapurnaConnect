@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog & Awareness — Annapurna Connect</title>
+  <meta name="description" content="Read articles about food waste, hunger in India, dignity in giving, and how technology is solving food insecurity across Indian cities." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>" />
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo"><div class="logo-icon">🌾</div>Annapurna <span>Connect</span></a>
+      <div class="navbar-nav">
+        <a href="index.html"     class="nav-link">Home</a>
+        <a href="about.html"     class="nav-link">About</a>
+        <a href="find-food.html" class="nav-link">Find Food</a>
+        <a href="impact.html"    class="nav-link">Impact</a>
+        <a href="volunteer.html" class="nav-link">Volunteer</a>
+        <a href="corporate.html" class="nav-link">CSR</a>
+        <a href="blog.html"      class="nav-link active">Blog</a>
+        <a href="contact.html"   class="nav-link">Contact</a>
+      </div>
+      <div class="navbar-cta">
+        <a href="find-food.html"   class="btn btn-outline btn-sm">Find Food</a>
+        <a href="donate-food.html" class="btn btn-primary btn-sm">Donate Food</a>
+      </div>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"     class="mobile-nav-link">🏠 Home</a>
+  <a href="about.html"     class="mobile-nav-link">ℹ️ About Us</a>
+  <a href="find-food.html" class="mobile-nav-link">🗺️ Find Food</a>
+  <a href="impact.html"    class="mobile-nav-link">📊 Impact Dashboard</a>
+  <a href="volunteer.html" class="mobile-nav-link">🤝 Volunteer</a>
+  <a href="corporate.html" class="mobile-nav-link">🏢 CSR Partnerships</a>
+  <a href="blog.html"      class="mobile-nav-link">📰 Blog</a>
+  <a href="contact.html"   class="mobile-nav-link">📞 Contact</a>
+  <div class="mobile-cta">
+    <a href="find-food.html"   class="btn btn-outline">Find Food</a>
+    <a href="donate-food.html" class="btn btn-primary">Donate Food</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="page-hero-label">📰 Blog & Awareness</div>
+    <h1>Stories, Research & Impact</h1>
+    <p>Deep dives into food waste, hunger, dignity, and the technology making a difference — one article at a time.</p>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<section class="section">
+  <div class="container">
+    <div class="label">Featured</div>
+    <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;background:linear-gradient(135deg,var(--green-50),var(--orange-50));border-radius:28px;padding:48px;margin-bottom:64px;border:1px solid var(--gray-200);">
+      <div>
+        <span class="badge badge-orange" style="margin-bottom:12px;">🔥 Must Read</span>
+        <h2 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;margin-bottom:16px;line-height:1.3;">India Wastes 68.7 Million Tonnes of Food Annually — Here's How Technology Is Fixing It</h2>
+        <p style="font-size:.975rem;color:var(--text-secondary);line-height:1.75;margin-bottom:24px;">
+          The numbers are staggering: India discards more food than many nations consume. While the Global Hunger Index ranks India 107th out of 125 countries, wedding buffets go to bins. 
+          We break down the systemic causes — and how platforms like Annapurna Connect are bridging this gap with technology, not charity.
+        </p>
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
+          <div class="blog-author-avatar">✍️</div>
+          <div>
+            <div style="font-weight:700;font-size:.9rem;">Priya Nair</div>
+            <div style="font-size:.8rem;color:var(--text-secondary);">July 18, 2025 · 8 min read</div>
+          </div>
+        </div>
+        <a href="#" onclick="showToast('📖 Opening article...','success');return false;" class="btn btn-primary">Read Full Article →</a>
+      </div>
+      <div style="text-align:center;font-size:8rem;">🍚</div>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;flex-wrap:wrap;gap:12px;">
+      <div class="label" style="margin:0;">All Articles</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="filter-chip active">All</span>
+        <span class="filter-chip">Food Waste</span>
+        <span class="filter-chip">Hunger</span>
+        <span class="filter-chip">Tech & Innovation</span>
+        <span class="filter-chip">Stories</span>
+        <span class="filter-chip">Policy</span>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="gap:28px;">
+      <div class="blog-card">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,var(--orange-100),var(--orange-200));">
+          <span>🗑️</span>
+          <div class="blog-category"><span class="badge badge-orange">Food Waste</span></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">The Real Cost of Throwing Away Food: Environmental & Economic Impact</div>
+          <div class="blog-card-excerpt">Every kilogram of food wasted releases 4.5 kg of CO₂. Here's a complete breakdown of what food waste really costs India — economically, environmentally, and socially.</div>
+          <div class="blog-card-meta">
+            <div class="blog-author">
+              <div class="blog-author-avatar">👤</div>
+              <span>Rohan Gupta</span>
+            </div>
+            <div class="blog-date">Jul 12, 2025 · 6 min</div>
+          </div>
+          <a href="#" onclick="showToast('📖 Opening article...','success');return false;" class="read-more" style="margin-top:14px;display:inline-flex;">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,var(--green-100),var(--green-200));">
+          <span>❤️</span>
+          <div class="blog-category"><span class="badge badge-green">Stories</span></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">₹1 Changed Everything: Savita's Story of Dignity and Nourishment</div>
+          <div class="blog-card-excerpt">For Savita Devi in Bengaluru, paying ₹1 for a meal wasn't just about food — it was about reclaiming her dignity during the hardest months of her life.</div>
+          <div class="blog-card-meta">
+            <div class="blog-author">
+              <div class="blog-author-avatar">✍️</div>
+              <span>Aditya Verma</span>
+            </div>
+            <div class="blog-date">Jul 5, 2025 · 4 min</div>
+          </div>
+          <a href="#" onclick="showToast('📖 Opening article...','success');return false;" class="read-more" style="margin-top:14px;display:inline-flex;">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">
+          <span>💻</span>
+          <div class="blog-category"><span class="badge badge-gray">Tech</span></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">How We Built a Real-Time Food Matching Engine That Works in 2 Minutes</div>
+          <div class="blog-card-excerpt">A deep dive into the geospatial algorithm, urgency scoring, and volunteer routing system behind Annapurna Connect's platform architecture.</div>
+          <div class="blog-card-meta">
+            <div class="blog-author">
+              <div class="blog-author-avatar">🔧</div>
+              <span>Rohan Gupta</span>
+            </div>
+            <div class="blog-date">Jun 28, 2025 · 10 min</div>
+          </div>
+          <a href="#" onclick="showToast('📖 Opening article...','success');return false;" class="read-more" style="margin-top:14px;display:inline-flex;">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#fdf4ff,#f3e8ff);">
+          <span>🏛️</span>
+          <div class="blog-category"><span class="badge badge-gray">Policy</span></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">India Needs a National Food Waste Reduction Policy — Here's What It Should Look Like</div>
+          <div class="blog-card-excerpt">Several countries have enacted mandatory food waste legislation. India is lagging. We outline what a comprehensive national policy framework should include.</div>
+          <div class="blog-card-meta">
+            <div class="blog-author">
+              <div class="blog-author-avatar">🏛️</div>
+              <span>Priya Nair</span>
+            </div>
+            <div class="blog-date">Jun 20, 2025 · 12 min</div>
+          </div>
+          <a href="#" onclick="showToast('📖 Opening article...','success');return false;" class="read-more" style="margin-top:14px;display:inline-flex;">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);">
+          <span>🥗</span>
+          <div class="blog-category"><span class="badge badge-green">Hunger</span></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">Understanding Urban Hunger: Why 30% of Slum Dwellers Skip Meals Daily</div>
+          <div class="blog-card-excerpt">Urban food insecurity is invisible and often unaddressed. Our research on food access patterns in Bengaluru's informal settlements reveals shocking gaps.</div>
+          <div class="blog-card-meta">
+            <div class="blog-author">
+              <div class="blog-author-avatar">🔬</div>
+              <span>Research Team</span>
+            </div>
+            <div class="blog-date">Jun 10, 2025 · 8 min</div>
+          </div>
+          <a href="#" onclick="showToast('📖 Opening article...','success');return false;" class="read-more" style="margin-top:14px;display:inline-flex;">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#fef3c7,#fde68a);">
+          <span>🤝</span>
+          <div class="blog-category"><span class="badge badge-orange">Stories</span></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">From Passion to 847 Meals: Arjun's Story of Becoming a Top Volunteer</div>
+          <div class="blog-card-excerpt">A software engineer by day, a food delivery hero by weekend. How Arjun Krishnan became Chennai's top volunteer and why he says it's "addictive in the best way."</div>
+          <div class="blog-card-meta">
+            <div class="blog-author">
+              <div class="blog-author-avatar">🚴</div>
+              <span>Meera Krishnan</span>
+            </div>
+            <div class="blog-date">May 30, 2025 · 5 min</div>
+          </div>
+          <a href="#" onclick="showToast('📖 Opening article...','success');return false;" class="read-more" style="margin-top:14px;display:inline-flex;">Read more →</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px;">
+      <a href="#" onclick="showToast('📂 Loading more articles...','success');return false;" class="btn btn-outline btn-lg">Load More Articles →</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Stay Informed. Stay Inspired.</h2>
+    <p>Get our weekly digest of impact stories, food waste research, and platform updates straight to your inbox.</p>
+    <div style="max-width:480px;margin:0 auto;display:flex;gap:10px;position:relative;z-index:1;">
+      <input type="email" id="blogNewsletter" placeholder="Your email address" style="flex:1;padding:14px 18px;border-radius:999px;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:.9rem;outline:none;" />
+      <button onclick="subscribeBlogNewsletter()" class="btn btn-white">Subscribe →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><div class="logo-icon">🌾</div>Annapurna Connect</div>
+        <p class="footer-brand-text">India's dignity-first food donation and distribution platform.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link">𝕏</a><a href="#" class="footer-social-link">📸</a>
+          <a href="#" class="footer-social-link">in</a><a href="#" class="footer-social-link">f</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <div class="footer-links">
+          <a href="donate-food.html" class="footer-link">Donate Food</a>
+          <a href="find-food.html"   class="footer-link">Find Food</a>
+          <a href="volunteer.html"   class="footer-link">Volunteer</a>
+          <a href="impact.html"      class="footer-link">Impact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="about.html"   class="footer-link">About Us</a>
+          <a href="blog.html"    class="footer-link">Blog</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your email" id="newsletterEmail" />
+          <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Annapurna Connect. Made with ❤️ to end hunger in India.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script>
+function subscribeBlogNewsletter() {
+  const input = document.getElementById('blogNewsletter');
+  if (!input || !input.value.includes('@')) { showToast('Please enter a valid email.','warn'); return; }
+  input.value = '';
+  showToast('✅ Subscribed! Welcome to our weekly digest.','success');
+}
+</script>
+</body>
+</html>

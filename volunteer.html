@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer — Annapurna Connect</title>
+  <meta name="description" content="Join our volunteer network for food pickup and delivery. Sign up, track your impact, and climb the volunteer leaderboard." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">🌾</div>
+        Annapurna <span>Connect</span>
+      </a>
+      <div class="navbar-nav">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="find-food.html"    class="nav-link">Find Food</a>
+        <a href="impact.html"       class="nav-link">Impact</a>
+        <a href="volunteer.html"    class="nav-link active">Volunteer</a>
+        <a href="corporate.html"    class="nav-link">CSR</a>
+        <a href="blog.html"         class="nav-link">Blog</a>
+        <a href="contact.html"      class="nav-link">Contact</a>
+      </div>
+      <div class="navbar-cta">
+        <a href="find-food.html"   class="btn btn-outline btn-sm">Find Food</a>
+        <a href="donate-food.html" class="btn btn-primary btn-sm">Donate Food</a>
+      </div>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"        class="mobile-nav-link">🏠 Home</a>
+  <a href="about.html"        class="mobile-nav-link">ℹ️ About Us</a>
+  <a href="find-food.html"    class="mobile-nav-link">🗺️ Find Food</a>
+  <a href="impact.html"       class="mobile-nav-link">📊 Impact Dashboard</a>
+  <a href="volunteer.html"    class="mobile-nav-link">🤝 Volunteer</a>
+  <a href="corporate.html"    class="mobile-nav-link">🏢 CSR Partnerships</a>
+  <a href="blog.html"         class="mobile-nav-link">📰 Blog</a>
+  <a href="contact.html"      class="mobile-nav-link">📞 Contact</a>
+  <div class="mobile-cta">
+    <a href="find-food.html"   class="btn btn-outline">Find Food</a>
+    <a href="donate-food.html" class="btn btn-primary">Donate Food</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="page-hero-label">🤝 Join the Movement</div>
+    <h1>Become a Volunteer</h1>
+    <p>Give a few hours each week to make thousands of meals reach the people who need them. Every delivery changes a life.</p>
+  </div>
+</section>
+
+<!-- VOLUNTEER SIGNUP + LEADERBOARD -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:64px;align-items:start;">
+
+      <!-- SIGNUP FORM -->
+      <div>
+        <div class="label">Sign Up</div>
+        <h2 class="heading-md" style="margin-bottom:8px;">Join Our Volunteer Network</h2>
+        <p class="body-md" style="margin-bottom:32px;">
+          We'll match you with pickup/delivery tasks near your location based on your availability. 
+          No experience required — just a vehicle (cycle, bike, or car) and a willing heart.
+        </p>
+
+        <div class="card" style="border-radius:24px;">
+          <div class="card-body" style="padding:36px;">
+            <form id="volunteerForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="volFirstName">First Name <span class="required">*</span></label>
+                  <input type="text" class="form-input" id="volFirstName" placeholder="Arjun" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="volLastName">Last Name <span class="required">*</span></label>
+                  <input type="text" class="form-input" id="volLastName" placeholder="Krishnan" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="volEmail">Email <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <span class="input-icon">✉️</span>
+                  <input type="email" class="form-input" id="volEmail" placeholder="arjun@email.com" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="volPhone">Phone <span class="required">*</span></label>
+                  <input type="tel" class="form-input" id="volPhone" placeholder="+91 XXXXX XXXXX" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="volCity">City <span class="required">*</span></label>
+                  <select class="form-select" id="volCity" required>
+                    <option value="">Select city</option>
+                    <option>Bengaluru</option>
+                    <option>Mumbai</option>
+                    <option>Delhi NCR</option>
+                    <option>Chennai</option>
+                    <option>Hyderabad</option>
+                    <option>Pune</option>
+                    <option>Kolkata</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Transport Mode <span class="required">*</span></label>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;">
+                  <label style="display:flex;align-items:center;gap:6px;padding:8px 16px;border:1.5px solid var(--gray-200);border-radius:10px;cursor:pointer;font-size:.875rem;">
+                    <input type="checkbox" name="transport" value="cycle" style="accent-color:var(--primary);" /> 🚲 Bicycle
+                  </label>
+                  <label style="display:flex;align-items:center;gap:6px;padding:8px 16px;border:1.5px solid var(--gray-200);border-radius:10px;cursor:pointer;font-size:.875rem;">
+                    <input type="checkbox" name="transport" value="bike" style="accent-color:var(--primary);" /> 🏍️ Motorbike
+                  </label>
+                  <label style="display:flex;align-items:center;gap:6px;padding:8px 16px;border:1.5px solid var(--gray-200);border-radius:10px;cursor:pointer;font-size:.875rem;">
+                    <input type="checkbox" name="transport" value="car" style="accent-color:var(--primary);" /> 🚗 Car
+                  </label>
+                  <label style="display:flex;align-items:center;gap:6px;padding:8px 16px;border:1.5px solid var(--gray-200);border-radius:10px;cursor:pointer;font-size:.875rem;">
+                    <input type="checkbox" name="transport" value="walk" style="accent-color:var(--primary);" /> 🚶 On foot
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Availability <span class="required">*</span></label>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px;">
+                  <label style="display:flex;align-items:center;gap:6px;font-size:.875rem;">
+                    <input type="checkbox" style="accent-color:var(--primary);" /> Weekday Mornings
+                  </label>
+                  <label style="display:flex;align-items:center;gap:6px;font-size:.875rem;">
+                    <input type="checkbox" style="accent-color:var(--primary);" /> Weekday Evenings
+                  </label>
+                  <label style="display:flex;align-items:center;gap:6px;font-size:.875rem;">
+                    <input type="checkbox" checked style="accent-color:var(--primary);" /> Weekend Mornings
+                  </label>
+                  <label style="display:flex;align-items:center;gap:6px;font-size:.875rem;">
+                    <input type="checkbox" style="accent-color:var(--primary);" /> Weekend Evenings
+                  </label>
+                  <label style="display:flex;align-items:center;gap:6px;font-size:.875rem;">
+                    <input type="checkbox" style="accent-color:var(--primary);" /> Anytime Available
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="volArea">Preferred Service Area</label>
+                <input type="text" class="form-input" id="volArea" placeholder="e.g. Koramangala, Indiranagar, HSR Layout" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="volMotivation">Why do you want to volunteer?</label>
+                <textarea class="form-textarea" id="volMotivation" placeholder="Tell us briefly what motivates you..." style="min-height:80px;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-secondary btn-lg" style="width:100%;justify-content:center;">
+                🤝 Join as Volunteer
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEADERBOARD -->
+      <div>
+        <div class="label">Leaderboard</div>
+        <h2 class="heading-md" style="margin-bottom:24px;">Top Volunteers This Month</h2>
+
+        <div class="leaderboard-row top-1">
+          <div class="lb-rank">🥇</div>
+          <div class="lb-avatar" style="background:linear-gradient(135deg,var(--primary),var(--orange-600));">A</div>
+          <div class="lb-info">
+            <div class="lb-name">Arjun Krishnan</div>
+            <div class="lb-stat">Chennai · 🚴 Bicycle</div>
+          </div>
+          <div class="lb-score">
+            <div class="lb-points">847</div>
+            <div class="lb-unit">meals delivered</div>
+          </div>
+        </div>
+
+        <div class="leaderboard-row top-2">
+          <div class="lb-rank">🥈</div>
+          <div class="lb-avatar" style="background:linear-gradient(135deg,var(--secondary),var(--green-700));">S</div>
+          <div class="lb-info">
+            <div class="lb-name">Sneha Iyer</div>
+            <div class="lb-stat">Bengaluru · 🏍️ Motorbike</div>
+          </div>
+          <div class="lb-score">
+            <div class="lb-points">762</div>
+            <div class="lb-unit">meals delivered</div>
+          </div>
+        </div>
+
+        <div class="leaderboard-row top-3">
+          <div class="lb-rank">🥉</div>
+          <div class="lb-avatar" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">R</div>
+          <div class="lb-info">
+            <div class="lb-name">Rahul Joshi</div>
+            <div class="lb-stat">Mumbai · 🚗 Car</div>
+          </div>
+          <div class="lb-score">
+            <div class="lb-points">691</div>
+            <div class="lb-unit">meals delivered</div>
+          </div>
+        </div>
+
+        <div class="leaderboard-row">
+          <div class="lb-rank" style="font-size:1rem;font-weight:700;color:var(--text-secondary);">4</div>
+          <div class="lb-avatar" style="background:linear-gradient(135deg,#0891b2,#0e7490);">M</div>
+          <div class="lb-info">
+            <div class="lb-name">Meena Pillai</div>
+            <div class="lb-stat">Hyderabad · 🚲 Bicycle</div>
+          </div>
+          <div class="lb-score">
+            <div class="lb-points">584</div>
+            <div class="lb-unit">meals delivered</div>
+          </div>
+        </div>
+
+        <div class="leaderboard-row">
+          <div class="lb-rank" style="font-size:1rem;font-weight:700;color:var(--text-secondary);">5</div>
+          <div class="lb-avatar" style="background:linear-gradient(135deg,#d97706,#b45309);">K</div>
+          <div class="lb-info">
+            <div class="lb-name">Karthik Murthy</div>
+            <div class="lb-stat">Pune · 🏍️ Motorbike</div>
+          </div>
+          <div class="lb-score">
+            <div class="lb-points">512</div>
+            <div class="lb-unit">meals delivered</div>
+          </div>
+        </div>
+
+        <div class="leaderboard-row">
+          <div class="lb-rank" style="font-size:1rem;font-weight:700;color:var(--text-secondary);">6</div>
+          <div class="lb-avatar" style="background:linear-gradient(135deg,#059669,#047857);">D</div>
+          <div class="lb-info">
+            <div class="lb-name">Deepika Sharma</div>
+            <div class="lb-stat">Delhi NCR · 🚗 Car</div>
+          </div>
+          <div class="lb-score">
+            <div class="lb-points">478</div>
+            <div class="lb-unit">meals delivered</div>
+          </div>
+        </div>
+
+        <!-- Stats Box -->
+        <div style="background:linear-gradient(135deg,var(--green-50),var(--green-100));border-radius:16px;padding:20px;margin-top:24px;border:1px solid var(--green-200);">
+          <h4 style="font-weight:700;margin-bottom:12px;">🌟 Volunteer Community Stats</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div>
+              <div style="font-size:1.5rem;font-weight:900;color:var(--secondary);">2,840</div>
+              <div style="font-size:.8rem;color:var(--text-secondary);">Active Volunteers</div>
+            </div>
+            <div>
+              <div style="font-size:1.5rem;font-weight:900;color:var(--secondary);">38</div>
+              <div style="font-size:.8rem;color:var(--text-secondary);">Cities Covered</div>
+            </div>
+            <div>
+              <div style="font-size:1.5rem;font-weight:900;color:var(--secondary);">4.2K</div>
+              <div style="font-size:.8rem;color:var(--text-secondary);">Deliveries/Month</div>
+            </div>
+            <div>
+              <div style="font-size:1.5rem;font-weight:900;color:var(--secondary);">14 min</div>
+              <div style="font-size:.8rem;color:var(--text-secondary);">Avg Delivery Time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTEER BENEFITS -->
+<section class="section" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Why Volunteer?</div>
+      <h2 class="heading-lg">More Than Just Deliveries</h2>
+    </div>
+    <div class="grid grid-4" style="gap:24px;">
+      <div class="value-card">
+        <div class="value-icon" style="background:linear-gradient(135deg,var(--orange-100),var(--orange-200));">🏆</div>
+        <h3>Recognition & Badges</h3>
+        <p>Earn community recognition, digital badges, and certificates of appreciation based on your delivery count.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon" style="background:linear-gradient(135deg,var(--green-100),var(--green-200));">📊</div>
+        <h3>Your Personal Impact</h3>
+        <p>Track exactly how many meals you've delivered, families you've helped, and CO₂ you've saved.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">🤝</div>
+        <h3>Community & Network</h3>
+        <p>Connect with like-minded volunteers, NGOs, and changemakers who are building a better India.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon" style="background:linear-gradient(135deg,#fdf4ff,#f3e8ff);">📜</div>
+        <h3>Verified Certificate</h3>
+        <p>Get a verified volunteer certificate accepted by universities and companies as CSR/social impact proof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><div class="logo-icon">🌾</div> Annapurna Connect</div>
+        <p class="footer-brand-text">India's dignity-first food donation and distribution platform.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link">𝕏</a>
+          <a href="#" class="footer-social-link">📸</a>
+          <a href="#" class="footer-social-link">in</a>
+          <a href="#" class="footer-social-link">f</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <div class="footer-links">
+          <a href="donate-food.html" class="footer-link">Donate Food</a>
+          <a href="find-food.html"   class="footer-link">Find Food</a>
+          <a href="volunteer.html"   class="footer-link">Volunteer</a>
+          <a href="impact.html"      class="footer-link">Impact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="about.html"    class="footer-link">About Us</a>
+          <a href="blog.html"     class="footer-link">Blog</a>
+          <a href="contact.html"  class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your email" id="newsletterEmail" />
+          <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Annapurna Connect. Made with ❤️ to end hunger in India.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script>
+  // Volunteer team image
+  document.querySelector('.hero-visual img')?.setAttribute('src', 
+    'C:\\Users\\vivek\\.gemini\\antigravity-ide\\brain\\8971b9e1-5c9a-45df-96c4-05e2bafbb724\\volunteer_team_1784960600299.png');
+</script>
+</body>
+</html>

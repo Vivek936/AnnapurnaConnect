@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate Food — Annapurna Connect</title>
+  <meta name="description" content="List your surplus food and connect it with families in need. Free or nominal pricing, quick listing form, donor recognition tiers." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">🌾</div>
+        Annapurna <span>Connect</span>
+      </a>
+      <div class="navbar-nav">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="find-food.html"    class="nav-link">Find Food</a>
+        <a href="impact.html"       class="nav-link">Impact</a>
+        <a href="volunteer.html"    class="nav-link">Volunteer</a>
+        <a href="corporate.html"    class="nav-link">CSR</a>
+        <a href="blog.html"         class="nav-link">Blog</a>
+        <a href="contact.html"      class="nav-link">Contact</a>
+      </div>
+      <div class="navbar-cta">
+        <a href="find-food.html"   class="btn btn-outline btn-sm">Find Food</a>
+        <a href="donate-food.html" class="btn btn-primary btn-sm active">Donate Food</a>
+      </div>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"        class="mobile-nav-link">🏠 Home</a>
+  <a href="about.html"        class="mobile-nav-link">ℹ️ About Us</a>
+  <a href="find-food.html"    class="mobile-nav-link">🗺️ Find Food</a>
+  <a href="impact.html"       class="mobile-nav-link">📊 Impact Dashboard</a>
+  <a href="volunteer.html"    class="mobile-nav-link">🤝 Volunteer</a>
+  <a href="corporate.html"    class="mobile-nav-link">🏢 CSR Partnerships</a>
+  <a href="blog.html"         class="mobile-nav-link">📰 Blog</a>
+  <a href="contact.html"      class="mobile-nav-link">📞 Contact</a>
+  <div class="mobile-cta">
+    <a href="find-food.html"   class="btn btn-outline">Find Food</a>
+    <a href="donate-food.html" class="btn btn-primary">Donate Food</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="background:linear-gradient(135deg,var(--orange-700) 0%,var(--primary) 50%,var(--orange-600) 100%);">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="page-hero-label">🍽️ Donor Portal</div>
+    <h1>List Your Surplus Food</h1>
+    <p>Turn leftover food into a lifeline. It takes under 2 minutes and makes a world of difference.</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:64px;align-items:start;">
+
+      <!-- FORM -->
+      <div>
+        <div class="alert alert-success">
+          <span class="alert-icon">ℹ️</span>
+          <div>Your listing will be matched with verified receivers within 5 km in real time. All food is FSSAI-guideline compliant.</div>
+        </div>
+
+        <div class="card" style="border-radius:24px;">
+          <div class="card-body" style="padding:36px;">
+            <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:28px;">📋 Food Listing Details</h2>
+            <form id="donateForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="donorName">Your Name / Organization <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <span class="input-icon">👤</span>
+                    <input type="text" class="form-input" id="donorName" placeholder="Spice Garden Restaurant" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="donorType">Donor Type <span class="required">*</span></label>
+                  <select class="form-select" id="donorType" required>
+                    <option value="">Select type...</option>
+                    <option>Restaurant / Hotel</option>
+                    <option>Event / Caterer</option>
+                    <option>Household</option>
+                    <option>Corporate Cafeteria</option>
+                    <option>Temple / Institution</option>
+                    <option>Supermarket / Grocery</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="foodItem">Food Item(s) <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <span class="input-icon">🍲</span>
+                    <input type="text" class="form-input" id="foodItem" placeholder="Dal Makhani, Jeera Rice" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="foodType">Food Type</label>
+                  <select class="form-select" id="foodType">
+                    <option>🥦 Vegetarian</option>
+                    <option>🥩 Non-Vegetarian</option>
+                    <option>🌿 Vegan</option>
+                    <option>🥗 Mixed</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="quantity">Quantity (portions/kg) <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <span class="input-icon">🍱</span>
+                    <input type="text" class="form-input" id="quantity" placeholder="e.g. 50 portions or 10 kg" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="bestBefore">Best Before Time <span class="required">*</span></label>
+                  <input type="datetime-local" class="form-input" id="bestBefore" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Pricing Model <span class="required">*</span></label>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;" id="pricingOptions">
+                  <label style="display:flex;align-items:center;gap:8px;padding:10px 18px;border:1.5px solid var(--gray-200);border-radius:10px;cursor:pointer;transition:all .2s;" class="pricing-option">
+                    <input type="radio" name="pricing" value="free" style="accent-color:var(--primary);" />
+                    <span>🎁 Free</span>
+                  </label>
+                  <label style="display:flex;align-items:center;gap:8px;padding:10px 18px;border:1.5px solid var(--gray-200);border-radius:10px;cursor:pointer;transition:all .2s;" class="pricing-option">
+                    <input type="radio" name="pricing" value="nominal" checked style="accent-color:var(--primary);" />
+                    <span>₹ Nominal (₹1–₹10)</span>
+                  </label>
+                  <label style="display:flex;align-items:center;gap:8px;padding:10px 18px;border:1.5px solid var(--gray-200);border-radius:10px;cursor:pointer;transition:all .2s;" class="pricing-option">
+                    <input type="radio" name="pricing" value="custom" style="accent-color:var(--primary);" />
+                    <span>✏️ Custom Price</span>
+                  </label>
+                </div>
+                <div style="margin-top:12px;" id="priceInput">
+                  <label class="form-label" for="priceAmount">Price per portion (₹)</label>
+                  <div class="price-input-wrap">
+                    <span class="price-prefix">₹</span>
+                    <input type="number" class="form-input price-input" id="priceAmount" placeholder="e.g. 1, 2, 5, 10" min="0" max="500" />
+                  </div>
+                  <div class="form-hint">Nominal pricing (₹1–₹10) helps preserve receiver dignity</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="pickupLocation">Pickup Address <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <span class="input-icon">📍</span>
+                  <input type="text" class="form-input" id="pickupLocation" placeholder="Full address with landmark" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contactPhone">Contact Phone <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <span class="input-icon">📞</span>
+                    <input type="tel" class="form-input" id="contactPhone" placeholder="+91 XXXXX XXXXX" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pickupWindow">Pickup Window</label>
+                  <select class="form-select" id="pickupWindow">
+                    <option>Available Now</option>
+                    <option>Within 1 hour</option>
+                    <option>Within 2 hours</option>
+                    <option>Scheduled: Specify time</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Food Photo (Optional)</label>
+                <div class="upload-zone" id="uploadZone" role="button" aria-label="Upload food photo" tabindex="0">
+                  <div class="upload-icon">📷</div>
+                  <p>Drag & drop or click to upload food photo</p>
+                  <small>Helps receivers quickly identify and trust the listing. JPG, PNG up to 5 MB</small>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="additionalNotes">Additional Notes</label>
+                <textarea class="form-textarea" id="additionalNotes" placeholder="Any allergen information, special instructions, or notes for the receiver..."></textarea>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
+                <input type="checkbox" id="termsCheck" style="accent-color:var(--primary);width:16px;height:16px;" required />
+                <label for="termsCheck" style="font-size:.875rem;color:var(--text-secondary);">
+                  I confirm the food is safe for consumption and prepared hygienically, per FSSAI guidelines.
+                </label>
+              </div>
+
+              <!-- Recurring donation -->
+              <div style="background:var(--green-50);border:1px solid var(--green-200);border-radius:14px;padding:20px;margin-bottom:24px;">
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <input type="checkbox" id="recurringDonation" style="accent-color:var(--secondary);width:16px;height:16px;" />
+                  <div>
+                    <label for="recurringDonation" style="font-weight:700;font-size:.9rem;cursor:pointer;">
+                      🔄 Set Up Recurring Donation
+                    </label>
+                    <div style="font-size:.8rem;color:var(--text-secondary);margin-top:2px;">
+                      For restaurants & caterers — auto-list surplus every day/week
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+                🚀 List Food for Distribution
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div style="display:flex;flex-direction:column;gap:24px;">
+
+        <!-- Donor Tiers -->
+        <div class="card">
+          <div class="card-body">
+            <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:6px;">🏆 Donor Recognition Tiers</h3>
+            <p style="font-size:.85rem;color:var(--text-secondary);margin-bottom:20px;">Earn badges as you grow your impact</p>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div class="tier-card tier-bronze">
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <div style="font-size:1.75rem;">🥉</div>
+                  <div>
+                    <div class="tier-name" style="font-size:1rem;margin:0;">Bronze Donor</div>
+                    <div class="tier-meals">10+ meals donated</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tier-card tier-silver">
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <div style="font-size:1.75rem;">🥈</div>
+                  <div>
+                    <div class="tier-name" style="font-size:1rem;margin:0;">Silver Donor</div>
+                    <div class="tier-meals">100+ meals donated</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tier-card tier-gold">
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <div style="font-size:1.75rem;">🥇</div>
+                  <div>
+                    <div class="tier-name" style="font-size:1rem;margin:0;">Gold Donor</div>
+                    <div class="tier-meals">500+ meals donated</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="card">
+          <div class="card-body">
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:16px;">📊 Today's Activity</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:.875rem;color:var(--text-secondary);">🍲 Listings today</span>
+                <span style="font-weight:700;color:var(--primary);">47</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:.875rem;color:var(--text-secondary);">✅ Claimed</span>
+                <span style="font-weight:700;color:var(--secondary);">41</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:.875rem;color:var(--text-secondary);">⚡ Avg match time</span>
+                <span style="font-weight:700;">4 min</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:.875rem;color:var(--text-secondary);">🍱 Meals distributed</span>
+                <span style="font-weight:700;color:var(--secondary);">2,847</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust info -->
+        <div style="background:linear-gradient(135deg,var(--orange-50),var(--orange-100));border-radius:16px;padding:24px;border:1px solid var(--orange-200);">
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:12px;">🔒 Safe & Secure Platform</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-secondary);">
+              <span style="color:var(--secondary);font-weight:700;">✓</span> All receivers are verified users
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-secondary);">
+              <span style="color:var(--secondary);font-weight:700;">✓</span> Food safety guidelines enforced
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-secondary);">
+              <span style="color:var(--secondary);font-weight:700;">✓</span> 80G tax exemption available
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-secondary);">
+              <span style="color:var(--secondary);font-weight:700;">✓</span> Real-time tracking & confirmation
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><div class="logo-icon">🌾</div> Annapurna Connect</div>
+        <p class="footer-brand-text">India's dignity-first food donation and distribution platform.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link">𝕏</a>
+          <a href="#" class="footer-social-link">📸</a>
+          <a href="#" class="footer-social-link">in</a>
+          <a href="#" class="footer-social-link">f</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <div class="footer-links">
+          <a href="donate-food.html" class="footer-link">Donate Food</a>
+          <a href="find-food.html"   class="footer-link">Find Food</a>
+          <a href="volunteer.html"   class="footer-link">Volunteer</a>
+          <a href="impact.html"      class="footer-link">Impact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="about.html"    class="footer-link">About Us</a>
+          <a href="blog.html"     class="footer-link">Blog</a>
+          <a href="contact.html"  class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your email" id="newsletterEmail" />
+          <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Annapurna Connect. Made with ❤️ to end hunger in India.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

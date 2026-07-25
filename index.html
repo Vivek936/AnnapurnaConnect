@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annapurna Connect — Bridging Surplus with Need, One Meal at a Time</title>
+  <meta name="description" content="Annapurna Connect is a dignity-first food donation and distribution platform connecting surplus food from restaurants, events and households to families in need through smart location-based matching across India." />
+  <meta name="keywords" content="food donation India, food waste, hunger relief, NGO food platform, food redistribution, volunteer food pickup" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>" />
+</head>
+<body>
+
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">🌾</div>
+        Annapurna <span>Connect</span>
+      </a>
+      <div class="navbar-nav">
+        <a href="index.html"        class="nav-link active">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="find-food.html"    class="nav-link">Find Food</a>
+        <a href="impact.html"       class="nav-link">Impact</a>
+        <a href="volunteer.html"    class="nav-link">Volunteer</a>
+        <a href="corporate.html"    class="nav-link">CSR</a>
+        <a href="blog.html"         class="nav-link">Blog</a>
+        <a href="contact.html"      class="nav-link">Contact</a>
+      </div>
+      <div class="navbar-cta">
+        <a href="find-food.html" class="btn btn-outline btn-sm">Find Food</a>
+        <a href="donate-food.html" class="btn btn-primary btn-sm">Donate Food</a>
+      </div>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"        class="mobile-nav-link">🏠 Home</a>
+  <a href="about.html"        class="mobile-nav-link">ℹ️ About Us</a>
+  <a href="find-food.html"    class="mobile-nav-link">🗺️ Find Food</a>
+  <a href="impact.html"       class="mobile-nav-link">📊 Impact Dashboard</a>
+  <a href="volunteer.html"    class="mobile-nav-link">🤝 Volunteer</a>
+  <a href="corporate.html"    class="mobile-nav-link">🏢 CSR Partnerships</a>
+  <a href="blog.html"         class="mobile-nav-link">📰 Blog</a>
+  <a href="contact.html"      class="mobile-nav-link">📞 Contact</a>
+  <div class="mobile-cta">
+    <a href="find-food.html"   class="btn btn-outline">Find Food</a>
+    <a href="donate-food.html" class="btn btn-primary">Donate Food</a>
+  </div>
+</div>
+
+
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content animate-fade-up">
+        <div class="hero-eyebrow">
+          🌱 India's Dignity-First Food Platform
+        </div>
+        <h1 class="hero-title">
+          Bridging <span class="highlight">Surplus</span> with Need —
+          One Meal at a Time
+        </h1>
+        <p class="hero-subtitle">
+          Smart location-based matching connects restaurants, events and households 
+          with surplus food to families in need — with dignity and fair pricing, 
+          not charity. Every roti counts. Every act matters.
+        </p>
+        <div class="hero-actions">
+          <a href="donate-food.html" class="btn btn-primary btn-lg">
+            🍽️ Donate Food Now
+          </a>
+          <a href="find-food.html" class="btn btn-secondary btn-lg">
+            🗺️ Find Food Near You
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <div class="trust-icon">✅</div>
+            <span>Verified donors</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🔒</div>
+            <span>Safe & secure</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">⚡</div>
+            <span>Live matching</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual animate-fade-up delay-2">
+        <div class="hero-image-wrap">
+          <img src="hero_banner.png" alt="Volunteers distributing food with dignity" />
+        </div>
+        <div class="hero-card-float card-1">
+          <div class="float-icon" style="background:#fff7ed;">🎉</div>
+          <div>
+            <div style="font-size:.75rem;color:var(--text-light)">Just listed</div>
+            <div>Biryani · 80 servings</div>
+            <div style="font-size:.8rem;color:var(--secondary);font-weight:700">₹1 per plate</div>
+          </div>
+        </div>
+        <div class="hero-card-float card-2">
+          <div class="float-icon" style="background:#f0fdf4;">📍</div>
+          <div>
+            <div style="font-size:.75rem;color:var(--text-light)">Matched in</div>
+            <div>2 minutes · 1.4 km away</div>
+            <div style="font-size:.8rem;color:var(--primary);font-weight:700">Claimed! ✓</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="impact-counters" id="impact-counters">
+  <div class="container">
+    <div class="counters-grid">
+      <div class="counter-item">
+        <div class="counter-icon">🍽️</div>
+        <div class="counter-number">
+          <span class="counter-val" data-target="847293" data-suffix="">0</span>+
+        </div>
+        <div class="counter-label">Meals Shared</div>
+      </div>
+      <div class="counter-item">
+        <div class="counter-icon">🤝</div>
+        <div class="counter-number">
+          <span class="counter-val" data-target="12400" data-suffix="">0</span>+
+        </div>
+        <div class="counter-label">Active Donors</div>
+      </div>
+      <div class="counter-item">
+        <div class="counter-icon">🏙️</div>
+        <div class="counter-number">
+          <span class="counter-val" data-target="38" data-suffix="">0</span>
+        </div>
+        <div class="counter-label">Cities Covered</div>
+      </div>
+      <div class="counter-item">
+        <div class="counter-icon">👨‍👩‍👧‍👦</div>
+        <div class="counter-number">
+          <span class="counter-val" data-target="94000" data-suffix="">0</span>+
+        </div>
+        <div class="counter-label">Families Helped</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="how-it-works section" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">How It Works</div>
+      <h2 class="heading-lg">Simple. Smart. Dignified.</h2>
+      <p class="body-lg">
+        Three steps to transform surplus food into dignity and nourishment 
+        for families across India.
+      </p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-icon step-icon-orange">🍲</div>
+        <h3>List Surplus Food</h3>
+        <p>
+          Restaurants, event organizers, and households list leftover food 
+          with details — quantity, type, location, and best-before time. 
+          Set a price: free or nominal (₹1–₹10).
+        </p>
+        <div class="step-tag">⏱️ Takes under 2 minutes</div>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-icon step-icon-green">📍</div>
+        <h3>Smart Location Match</h3>
+        <p>
+          Our algorithm instantly matches your listing to verified receivers 
+          and volunteers within a 5 km radius — prioritizing urgency, quantity, 
+          and dietary preferences.
+        </p>
+        <div class="step-tag" style="background:var(--green-50);color:var(--green-800);">⚡ Real-time matching</div>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-icon step-icon-blue">🤝</div>
+        <h3>Dignified Distribution</h3>
+        <p>
+          Receivers claim and pick up food with dignity — paying a small nominal 
+          price (e.g., ₹1 per roti) that preserves self-respect. Volunteers 
+          assist delivery for those unable to travel.
+        </p>
+        <div class="step-tag" style="background:#eff6ff;color:#1d4ed8;">💛 Dignity preserved</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="donate-food.html" class="btn btn-primary btn-lg" style="margin-right:16px;">Start Donating</a>
+      <a href="about.html" class="btn btn-outline btn-lg">Learn More</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="featured-listings" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Live Listings</div>
+      <h2 class="heading-lg">Food Available Near You</h2>
+      <p class="body-lg">Real-time surplus food available for claim right now. First come, first served — with dignity.</p>
+    </div>
+    <div class="grid grid-3" style="margin-bottom:40px;">
+      
+      <div class="food-card">
+        <div class="food-card-img">
+          <span>🍛</span>
+          <div class="food-card-badges">
+            <span class="badge badge-green">✅ Verified</span>
+          </div>
+          <div class="food-urgency">
+            <span class="badge badge-orange">🔥 Urgent</span>
+          </div>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-title">Dal Makhani + Rice</div>
+          <div class="food-card-meta">
+            <span>📍 2.1 km · Koramangala</span>
+            <span>🍱 50 portions</span>
+          </div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:14px;">
+            ⏰ Best before: Today, 8:00 PM &nbsp;|&nbsp; 🏪 Spice Garden Restaurant
+          </div>
+          <div class="food-card-footer">
+            <div class="food-price">
+              <span class="original">MRP ₹180</span>₹2
+            </div>
+            <button class="claim-btn" onclick="showClaimModal()">Claim Now →</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="food-card">
+        <div class="food-card-img" style="background:linear-gradient(135deg,var(--green-100),var(--green-200));">
+          <span>🥗</span>
+          <div class="food-card-badges">
+            <span class="badge badge-green">✅ Verified</span>
+            <span class="badge badge-gray">🥦 Veg</span>
+          </div>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-title">Pav Bhaji + Pav (Wedding)</div>
+          <div class="food-card-meta">
+            <span>📍 0.8 km · Indiranagar</span>
+            <span>🍱 120 portions</span>
+          </div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:14px;">
+            ⏰ Best before: Today, 10:30 PM &nbsp;|&nbsp; 🎉 Event Caterers
+          </div>
+          <div class="food-card-footer">
+            <div class="food-price">FREE</div>
+            <button class="claim-btn" onclick="showClaimModal()">Claim Now →</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="food-card">
+        <div class="food-card-img" style="background:linear-gradient(135deg,var(--orange-100),var(--orange-200));">
+          <span>🍞</span>
+          <div class="food-card-badges">
+            <span class="badge badge-green">✅ Verified</span>
+          </div>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-title">Rotis + Sabzi (Household)</div>
+          <div class="food-card-meta">
+            <span>📍 1.3 km · HSR Layout</span>
+            <span>🍱 25 rotis</span>
+          </div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:14px;">
+            ⏰ Best before: Today, 7:00 PM &nbsp;|&nbsp; 🏠 Priya Sharma (Household)
+          </div>
+          <div class="food-card-footer">
+            <div class="food-price">
+              <span class="original">—</span>₹1
+              <span style="font-size:.78rem;font-weight:400;color:var(--text-light)">per roti</span>
+            </div>
+            <button class="claim-btn" onclick="showClaimModal()">Claim Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <a href="find-food.html" class="btn btn-primary btn-lg">View All Listings →</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="location-matching">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+      <div>
+        <div class="label label-green">Smart Matching</div>
+        <h2 class="heading-lg" style="margin-bottom:20px;">
+          Location-Based Food Matching in Real Time
+        </h2>
+        <p class="body-md" style="margin-bottom:24px;">
+          Our intelligent algorithm scans surplus listings and matches them with 
+          verified receivers within a 5 km radius — in real time, 24/7. Priority 
+          is given based on urgency, quantity, and proximity.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:32px;">
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--green-50);border-radius:12px;border:1px solid var(--green-200);">
+            <span style="font-size:1.5rem;">📡</span>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;">Real-time notifications</div>
+              <div style="font-size:.83rem;color:var(--text-secondary);">Receivers are alerted instantly when food is listed nearby</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--orange-50);border-radius:12px;border:1px solid var(--orange-200);">
+            <span style="font-size:1.5rem;">🛣️</span>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;">Optimized pickup routes</div>
+              <div style="font-size:.83rem;color:var(--text-secondary);">Volunteers get the most efficient delivery paths automatically</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--gray-50);border-radius:12px;border:1px solid var(--gray-200);">
+            <span style="font-size:1.5rem;">🔐</span>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;">Verified participants only</div>
+              <div style="font-size:.83rem;color:var(--text-secondary);">All donors and receivers go through a quick verification process</div>
+            </div>
+          </div>
+        </div>
+        <a href="find-food.html" class="btn btn-secondary">Explore Map View →</a>
+      </div>
+      <div>
+        <div class="map-container">
+          <div class="map-bg"></div>
+          <div class="map-roads">
+            <div class="map-road" style="top:35%;left:0;right:0;height:4px;"></div>
+            <div class="map-road" style="top:65%;left:0;right:0;height:3px;"></div>
+            <div class="map-road" style="left:30%;top:0;bottom:0;width:4px;"></div>
+            <div class="map-road" style="left:60%;top:0;bottom:0;width:3px;"></div>
+            <div class="map-road" style="top:50%;left:30%;right:0;height:2px;transform:rotate(30deg);"></div>
+          </div>
+          
+          <div class="map-pin pin-orange" style="top:20%;left:25%;">
+            <div class="pin-icon"><span>🍲</span></div>
+            <div class="pin-label">Dal Makhani</div>
+          </div>
+          <div class="map-pin pin-orange" style="top:55%;left:55%;animation-delay:.5s;">
+            <div class="pin-icon"><span>🥗</span></div>
+            <div class="pin-label">Wedding Food</div>
+          </div>
+          <div class="map-pin pin-orange" style="top:70%;left:20%;animation-delay:1s;">
+            <div class="pin-icon"><span>🍞</span></div>
+            <div class="pin-label">Rotis</div>
+          </div>
+          
+          <div class="map-pin pin-green" style="top:30%;left:62%;animation-delay:.75s;">
+            <div class="pin-icon"><span>👨‍👩‍👧</span></div>
+            <div class="pin-label">Family · 1.2 km</div>
+          </div>
+          <div class="map-pin pin-green" style="top:75%;left:65%;animation-delay:1.25s;">
+            <div class="pin-icon"><span>🏠</span></div>
+            <div class="pin-label">Shelter · 0.8 km</div>
+          </div>
+          <div class="map-overlay" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:90%;">
+            <div style="background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:14px;padding:14px 20px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:space-between;gap:12px;">
+              <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;">
+                <span style="width:10px;height:10px;background:var(--primary);border-radius:50%;display:inline-block;"></span>
+                <span>Donor</span>
+                <span style="width:10px;height:10px;background:var(--secondary);border-radius:50%;display:inline-block;margin-left:8px;"></span>
+                <span>Receiver</span>
+              </div>
+              <div style="font-size:.78rem;color:var(--secondary);font-weight:700;">⚡ 3 live matches today</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Stories</div>
+      <h2 class="heading-lg">Real People, Real Impact</h2>
+      <p class="body-lg">Voices from our community of donors, receivers, and volunteers who are changing India — one meal at a time.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "We run a catering business and used to throw away 30–40 kg of food after every event. 
+          Annapurna Connect changed that completely. Now we list everything and it's picked up 
+          within the hour. Feels amazing to know it's feeding someone, not a bin."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,var(--primary),var(--orange-600));">R</div>
+          <div>
+            <div class="author-name">Rahul Mehta</div>
+            <div class="author-role">🍴 Caterer · Pune &nbsp;|&nbsp; Gold Donor ⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "I was hesitant at first — I didn't want to feel like I was begging. But paying ₹1 
+          for a meal with my dignity intact? That changed everything. My children have been 
+          eating warm meals every evening for 3 months now. I'm so grateful."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,var(--secondary),var(--green-700));">S</div>
+          <div>
+            <div class="author-name">Savita Devi</div>
+            <div class="author-role">👨‍👩‍👧 Receiver · Bengaluru</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "I volunteer on weekends, making 2–3 deliveries each Saturday morning. The app tells 
+          me the most efficient route. I've delivered over 400 meals in 6 months, and I can 
+          see my impact on the leaderboard. It's addictive — in the best way!"
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">A</div>
+          <div>
+            <div class="author-name">Arjun Krishnan</div>
+            <div class="author-role">🚴 Volunteer · Chennai &nbsp;|&nbsp; Top 10 🏆</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="partners-strip" id="partners">
+  <div class="container">
+    <div class="partners-label">Trusted by & Partnered With</div>
+    <div class="partners-logos">
+      <div class="partner-logo">
+        <div class="logo-emoji">🍕</div>
+        <div class="logo-name">Domino's India</div>
+      </div>
+      <div class="partner-logo">
+        <div class="logo-emoji">🌮</div>
+        <div class="logo-name">Barbeque Nation</div>
+      </div>
+      <div class="partner-logo">
+        <div class="logo-emoji">🏨</div>
+        <div class="logo-name">Taj Hotels</div>
+      </div>
+      <div class="partner-logo">
+        <div class="logo-emoji">🤝</div>
+        <div class="logo-name">Robin Hood Army</div>
+      </div>
+      <div class="partner-logo">
+        <div class="logo-emoji">🌾</div>
+        <div class="logo-name">ISKCON Food</div>
+      </div>
+      <div class="partner-logo">
+        <div class="logo-emoji">💼</div>
+        <div class="logo-name">Infosys CSR</div>
+      </div>
+      <div class="partner-logo">
+        <div class="logo-emoji">🏥</div>
+        <div class="logo-name">Akshaya Patra</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-banner" id="cta">
+  <div class="container">
+    <h2>Ready to Make a Difference?</h2>
+    <p>
+      Join 12,400+ donors and 94,000 families in building a hunger-free, 
+      waste-free India — one meal at a time.
+    </p>
+    <div class="cta-actions">
+      <a href="donate-food.html" class="btn btn-white btn-lg">🍽️ Donate Food Now</a>
+      <a href="find-food.html"   class="btn btn-outline-white btn-lg">🗺️ Find Food Near Me</a>
+      <a href="volunteer.html"   class="btn btn-outline-white btn-lg">🤝 Volunteer Today</a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon">🌾</div>
+          Annapurna Connect
+        </div>
+        <p class="footer-brand-text">
+          India's dignity-first food donation and distribution platform. 
+          Connecting surplus food to families in need through smart, 
+          location-based matching — preserving dignity, eliminating waste.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer-social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="footer-social-link" aria-label="Facebook">f</a>
+          <a href="#" class="footer-social-link" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <div class="footer-links">
+          <a href="donate-food.html" class="footer-link">Donate Food</a>
+          <a href="find-food.html"   class="footer-link">Find Food</a>
+          <a href="volunteer.html"   class="footer-link">Volunteer</a>
+          <a href="impact.html"      class="footer-link">Impact Dashboard</a>
+          <a href="corporate.html"   class="footer-link">CSR Partnerships</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="about.html"    class="footer-link">About Us</a>
+          <a href="blog.html"     class="footer-link">Blog & Awareness</a>
+          <a href="contact.html"  class="footer-link">Contact Us</a>
+          <a href="#"             class="footer-link">Press Kit</a>
+          <a href="#"             class="footer-link">Careers</a>
+          <a href="#"             class="footer-link">Annual Reports</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p style="font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:12px;">
+          Get weekly impact stories and food availability alerts.
+        </p>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your email" id="newsletterEmail" />
+          <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+        </div>
+        <div class="app-badges">
+          <div class="app-badge">
+            <span class="app-icon">🍎</span>
+            <div class="app-text">
+              <span class="coming">Coming Soon</span>
+              Download on App Store
+            </div>
+          </div>
+          <div class="app-badge">
+            <span class="app-icon">🤖</span>
+            <div class="app-text">
+              <span class="coming">Coming Soon</span>
+              Get it on Google Play
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Annapurna Connect. Made with ❤️ to end hunger in India.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Service</a>
+        <a href="#" class="footer-bottom-link">Cookie Policy</a>
+        <a href="#" class="footer-bottom-link">NGO Registration: 80G/12A</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div id="claimModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;display:none;align-items:center;justify-content:center;padding:24px;">
+  <div style="background:#fff;border-radius:24px;padding:36px;max-width:440px;width:100%;position:relative;animation:fadeInUp .3s ease;">
+    <button onclick="hideClaimModal()" style="position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--gray-100);border:none;cursor:pointer;font-size:1rem;">✕</button>
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="font-size:2.5rem;margin-bottom:8px;">🎉</div>
+      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:8px;">Claim This Listing</h3>
+      <p style="font-size:.9rem;color:var(--text-secondary);">Enter your details to reserve your pickup slot</p>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Your Name <span class="required">*</span></label>
+      <input type="text" class="form-input" placeholder="Full name" id="claimName" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Phone Number <span class="required">*</span></label>
+      <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" id="claimPhone" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Preferred Pickup Time</label>
+      <select class="form-select" id="claimTime">
+        <option>As soon as possible</option>
+        <option>Within 1 hour</option>
+        <option>Within 2 hours</option>
+        <option>Evening pickup</option>
+      </select>
+    </div>
+    <button onclick="confirmClaim()" class="btn btn-primary" style="width:100%;justify-content:center;">Confirm Claim ✓</button>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

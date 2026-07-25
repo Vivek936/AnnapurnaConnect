@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Food Near You — Annapurna Connect</title>
+  <meta name="description" content="Find surplus food near you — filtered by location, price, food type, and urgency. One-tap claim with pickup time selection." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">🌾</div>
+        Annapurna <span>Connect</span>
+      </a>
+      <div class="navbar-nav">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="find-food.html"    class="nav-link active">Find Food</a>
+        <a href="impact.html"       class="nav-link">Impact</a>
+        <a href="volunteer.html"    class="nav-link">Volunteer</a>
+        <a href="corporate.html"    class="nav-link">CSR</a>
+        <a href="blog.html"         class="nav-link">Blog</a>
+        <a href="contact.html"      class="nav-link">Contact</a>
+      </div>
+      <div class="navbar-cta">
+        <a href="find-food.html"   class="btn btn-outline btn-sm">Find Food</a>
+        <a href="donate-food.html" class="btn btn-primary btn-sm">Donate Food</a>
+      </div>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Toggle menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"        class="mobile-nav-link">🏠 Home</a>
+  <a href="about.html"        class="mobile-nav-link">ℹ️ About Us</a>
+  <a href="find-food.html"    class="mobile-nav-link">🗺️ Find Food</a>
+  <a href="impact.html"       class="mobile-nav-link">📊 Impact Dashboard</a>
+  <a href="volunteer.html"    class="mobile-nav-link">🤝 Volunteer</a>
+  <a href="corporate.html"    class="mobile-nav-link">🏢 CSR Partnerships</a>
+  <a href="blog.html"         class="mobile-nav-link">📰 Blog</a>
+  <a href="contact.html"      class="mobile-nav-link">📞 Contact</a>
+  <div class="mobile-cta">
+    <a href="find-food.html"   class="btn btn-outline">Find Food</a>
+    <a href="donate-food.html" class="btn btn-primary">Donate Food</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="page-hero-label">🗺️ Receiver Portal</div>
+    <h1>Find Food Near You</h1>
+    <p>Browse real-time surplus food listings in your city, filtered by location, price, and type. Claim with one tap.</p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<section class="section">
+  <div class="container">
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar" style="margin-bottom:32px;">
+      <div class="filter-search">
+        <span>🔍</span>
+        <input type="text" placeholder="Search food items, areas..." id="foodSearch" />
+      </div>
+      <span class="filter-chip active" id="chip-nearest" data-filter="nearest">📍 Nearest First</span>
+      <span class="filter-chip" id="chip-cheapest" data-filter="cheapest">₹ Lowest Price</span>
+      <span class="filter-chip" id="chip-veg" data-filter="veg">🥦 Vegetarian</span>
+      <span class="filter-chip" id="chip-urgent" data-filter="urgent">🔥 Urgent Only</span>
+      <span class="filter-chip" id="chip-free" data-filter="free">🎁 Free Only</span>
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="list" aria-label="List view">☰</button>
+        <button class="view-btn" data-view="map" aria-label="Map view">🗺️</button>
+      </div>
+    </div>
+
+    <!-- SORT & COUNT -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px;">
+      <div style="font-size:.9rem;color:var(--text-secondary);">
+        Showing <strong style="color:var(--text-primary);">12 listings</strong> near Bengaluru
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-size:.875rem;color:var(--text-secondary);">Sort by:</span>
+        <select class="form-select" style="width:auto;padding:8px 14px;font-size:.875rem;" id="sortSelect">
+          <option>Nearest First</option>
+          <option>Lowest Price</option>
+          <option>Urgency</option>
+          <option>Quantity</option>
+          <option>Newest Listed</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- LIST VIEW -->
+    <div id="listView" class="grid grid-3">
+      <!-- Listing 1 -->
+      <div class="food-card">
+        <div class="food-card-img">
+          <span>🍛</span>
+          <div class="food-card-badges">
+            <span class="badge badge-green">✅ Verified</span>
+          </div>
+          <div class="food-urgency"><span class="badge badge-orange">🔥 Urgent</span></div>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-title">Dal Makhani + Jeera Rice</div>
+          <div class="food-card-meta">
+            <span>📍 2.1 km · Koramangala</span>
+            <span>🍱 50 portions</span>
+          </div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:8px;">⏰ Best before: Today, 8:00 PM</div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:14px;">🏪 Spice Garden Restaurant</div>
+          <div class="food-card-footer">
+            <div class="food-price"><span class="original">₹180</span>₹2</div>
+            <button class="claim-btn" onclick="showClaimModal()">Claim Now →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listing 2 -->
+      <div class="food-card">
+        <div class="food-card-img" style="background:linear-gradient(135deg,var(--green-100),var(--green-200));">
+          <span>🥗</span>
+          <div class="food-card-badges">
+            <span class="badge badge-green">✅ Verified</span>
+            <span class="badge badge-gray">🥦 Veg</span>
+          </div>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-title">Pav Bhaji + Pav (80 sets)</div>
+          <div class="food-card-meta">
+            <span>📍 0.8 km · Indiranagar</span>
+            <span>🍱 80 portions</span>
+          </div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:8px;">⏰ Best before: Today, 10:30 PM</div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:14px;">🎉 Royal Event Caterers</div>
+          <div class="food-card-footer">
+            <div class="food-price">FREE 🎁</div>
+            <button class="claim-btn" onclick="showClaimModal()">Claim Now →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listing 3 -->
+      <div class="food-card">
+        <div class="food-card-img" style="background:linear-gradient(135deg,var(--orange-100),var(--orange-200));">
+          <span>🍞</span>
+          <div class="food-card-badges">
+            <span class="badge badge-green">✅ Verified</span>
+          </div>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-title">Rotis + Mixed Sabzi</div>
+          <div class="food-card-meta">
+            <span>📍 1.3 km · HSR Layout</span>
+            <span>🍱 25 rotis</span>
+          </div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:8px;">⏰ Best before: Today, 7:00 PM</div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:14px;">🏠 Priya Sharma (Household)</div>
+          <div class="food-card-footer">
+            <div class="food-price">₹1 <span style="font-size:.78rem;font-weight:400;color:var(--text-light)">per roti</span></div>
+            <button class="claim-btn" onclick="showClaimModal()">Claim Now →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listing 4 -->
+      <div class="food-card">
+        <div class="food-card-img" style="background:linear-gradient(135deg,#fef3c7,#fde68a);">
+          <span>🍚</span>
+          <div class="food-card-badges">
+            <span class="badge badge-green">✅ Verified</span>
+          </div>
+          <div class="food-urgency"><span class="badge badge-orange">🔥 Urgent</span></div>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-title">Biryani (Chicken) + Raita</div>
+          <div class="food-card-meta">
+            <span>📍 3.4 km · Whitefield</span>
+            <span>🍱 120 portions</span>
+          </div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:8px;">⏰ Best before: Today, 9:00 PM</div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:14px;">🏨 Grand Hyatt Cafeteria</div>
+          <div class="food-card-footer">
+            <div class="food-price"><span class="original">₹350</span>₹5</div>
+            <button class="claim-btn" onclick="showClaimModal()">Claim Now →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listing 5 -->
+      <div class="food-card">
+        <div class="food-card-img" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);">
+          <span>🥘</span>
+          <div class="food-card-badges">
+            <span class="badge badge-green">✅ Verified</span>
+            <span class="badge badge-gray">🌿 Vegan</span>
+          </div>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-title">Sambar + Rice + Papad</div>
+          <div class="food-card-meta">
+            <span>📍 1.9 km · Jayanagar</span>
+            <span>🍱 60 portions</span>
+          </div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:8px;">⏰ Best before: Today, 6:00 PM</div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:14px;">🏛️ ISKCON Temple</div>
+          <div class="food-card-footer">
+            <div class="food-price">FREE 🎁</div>
+            <button class="claim-btn" onclick="showClaimModal()">Claim Now →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listing 6 -->
+      <div class="food-card">
+        <div class="food-card-img" style="background:linear-gradient(135deg,#fdf4ff,#f3e8ff);">
+          <span>🍰</span>
+          <div class="food-card-badges">
+            <span class="badge badge-green">✅ Verified</span>
+          </div>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-title">Assorted Sweets + Snacks</div>
+          <div class="food-card-meta">
+            <span>📍 4.2 km · MG Road</span>
+            <span>🍱 200 pieces</span>
+          </div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:8px;">⏰ Best before: Tomorrow, 12:00 PM</div>
+          <div style="font-size:.82rem;color:var(--text-secondary);margin-bottom:14px;">🎂 Celebrations Bakery</div>
+          <div class="food-card-footer">
+            <div class="food-price">₹2 <span style="font-size:.78rem;font-weight:400;color:var(--text-light)">per piece</span></div>
+            <button class="claim-btn" onclick="showClaimModal()">Claim Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAP VIEW (hidden by default) -->
+    <div id="mapView" class="hidden">
+      <div class="map-container" style="min-height:520px;">
+        <div class="map-bg"></div>
+        <div class="map-roads">
+          <div class="map-road" style="top:30%;left:0;right:0;height:5px;"></div>
+          <div class="map-road" style="top:55%;left:0;right:0;height:4px;"></div>
+          <div class="map-road" style="top:75%;left:0;right:0;height:3px;"></div>
+          <div class="map-road" style="left:25%;top:0;bottom:0;width:5px;"></div>
+          <div class="map-road" style="left:55%;top:0;bottom:0;width:4px;"></div>
+          <div class="map-road" style="left:80%;top:0;bottom:0;width:3px;"></div>
+        </div>
+        <div class="map-pin pin-orange" style="top:18%;left:20%;">
+          <div class="pin-icon"><span>🍛</span></div>
+          <div class="pin-label">Dal Makhani · ₹2</div>
+        </div>
+        <div class="map-pin pin-orange" style="top:45%;left:12%;animation-delay:.3s;">
+          <div class="pin-icon"><span>🥗</span></div>
+          <div class="pin-label">Pav Bhaji · FREE</div>
+        </div>
+        <div class="map-pin pin-orange" style="top:28%;left:52%;animation-delay:.6s;">
+          <div class="pin-icon"><span>🍚</span></div>
+          <div class="pin-label">Biryani · ₹5</div>
+        </div>
+        <div class="map-pin pin-orange" style="top:65%;left:35%;animation-delay:.9s;">
+          <div class="pin-icon"><span>🥘</span></div>
+          <div class="pin-label">Sambar Rice · FREE</div>
+        </div>
+        <div class="map-pin pin-orange" style="top:50%;left:72%;animation-delay:1.2s;">
+          <div class="pin-icon"><span>🍰</span></div>
+          <div class="pin-label">Sweets · ₹2</div>
+        </div>
+        <div class="map-pin pin-green" style="top:40%;left:42%;">
+          <div class="pin-icon"><span>📍</span></div>
+          <div class="pin-label">You are here</div>
+        </div>
+        <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:90%;max-width:500px;">
+          <div style="background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:14px;padding:14px 20px;box-shadow:0 8px 24px rgba(0,0,0,.12);text-align:center;">
+            <p style="font-size:.85rem;color:var(--text-secondary);margin-bottom:8px;">
+              📍 Showing listings within <strong>5 km</strong> of your location
+            </p>
+            <button onclick="showToast('📍 Location access enabled for better matching!','success')" style="background:var(--primary);color:#fff;padding:8px 20px;border-radius:20px;border:none;font-size:.8rem;font-weight:600;cursor:pointer;">
+              📡 Enable Precise Location
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOAD MORE -->
+    <div style="text-align:center;margin-top:40px;">
+      <button onclick="showToast('✅ Loading more listings...','success')" class="btn btn-outline btn-lg">
+        Load More Listings ↓
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO CLAIM -->
+<section class="section" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">How to Claim</div>
+      <h2 class="heading-lg">Getting Food Is Simple</h2>
+    </div>
+    <div class="grid grid-4" style="gap:24px;">
+      <div style="text-align:center;padding:28px 20px;">
+        <div style="width:60px;height:60px;background:var(--orange-100);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;">👤</div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;">1. Sign Up</h3>
+        <p style="font-size:.875rem;color:var(--text-secondary);">Quick verification — phone number + basic details. Free for all receivers.</p>
+      </div>
+      <div style="text-align:center;padding:28px 20px;">
+        <div style="width:60px;height:60px;background:var(--green-100);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;">🔍</div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;">2. Browse</h3>
+        <p style="font-size:.875rem;color:var(--text-secondary);">Filter by location, price, food type, and urgency. Map or list view.</p>
+      </div>
+      <div style="text-align:center;padding:28px 20px;">
+        <div style="width:60px;height:60px;background:#dbeafe;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;">⚡</div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;">3. Claim</h3>
+        <p style="font-size:.875rem;color:var(--text-secondary);">One-tap claim with your preferred pickup time slot. Get instant confirmation.</p>
+      </div>
+      <div style="text-align:center;padding:28px 20px;">
+        <div style="width:60px;height:60px;background:#fdf4ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;">🤝</div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;">4. Collect</h3>
+        <p style="font-size:.875rem;color:var(--text-secondary);">Visit the pickup point with your claim code. Pay the nominal amount (if any) and collect with dignity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLAIM MODAL -->
+<div id="claimModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;padding:24px;">
+  <div style="background:#fff;border-radius:24px;padding:36px;max-width:440px;width:100%;position:relative;animation:fadeInUp .3s ease;">
+    <button onclick="hideClaimModal()" style="position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--gray-100);border:none;cursor:pointer;font-size:1rem;">✕</button>
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="font-size:2.5rem;margin-bottom:8px;">🎉</div>
+      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:8px;">Claim This Listing</h3>
+      <p style="font-size:.9rem;color:var(--text-secondary);">Reserve your pickup slot now</p>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Your Name <span class="required">*</span></label>
+      <input type="text" class="form-input" placeholder="Full name" id="claimName" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Phone Number <span class="required">*</span></label>
+      <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" id="claimPhone" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Preferred Pickup Time</label>
+      <select class="form-select" id="claimTime">
+        <option>As soon as possible</option>
+        <option>Within 1 hour</option>
+        <option>Within 2 hours</option>
+        <option>Evening pickup</option>
+      </select>
+    </div>
+    <button onclick="confirmClaim()" class="btn btn-primary" style="width:100%;justify-content:center;">Confirm Claim ✓</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><div class="logo-icon">🌾</div> Annapurna Connect</div>
+        <p class="footer-brand-text">India's dignity-first food donation and distribution platform.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link">𝕏</a>
+          <a href="#" class="footer-social-link">📸</a>
+          <a href="#" class="footer-social-link">in</a>
+          <a href="#" class="footer-social-link">f</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <div class="footer-links">
+          <a href="donate-food.html" class="footer-link">Donate Food</a>
+          <a href="find-food.html"   class="footer-link">Find Food</a>
+          <a href="volunteer.html"   class="footer-link">Volunteer</a>
+          <a href="impact.html"      class="footer-link">Impact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="about.html"    class="footer-link">About Us</a>
+          <a href="blog.html"     class="footer-link">Blog</a>
+          <a href="contact.html"  class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your email" id="newsletterEmail" />
+          <button class="newsletter-btn" onclick="subscribeNewsletter()">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Annapurna Connect. Made with ❤️ to end hunger in India.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
